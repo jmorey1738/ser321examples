@@ -259,7 +259,6 @@ class WebServer {
                     builder.append("HTTP/1.1 200 OK\n");
                     builder.append("Content-Type: text/plain; charset=utf-8\n");
                     builder.append("\n");
-                    //builder.append(json);
 
                     for (int i = 0; i < githubResponse.length();i ++) {
                         builder.append(githubResponse.getJSONObject(i).getJSONObject("owner").get("login") + ", ");
@@ -267,7 +266,7 @@ class WebServer {
                         builder.append(githubResponse.getJSONObject(i).get("name"));
                         builder.append("\n");
                     }
-                    
+
 
                 } else {
                     // if the request is not recognized at all
